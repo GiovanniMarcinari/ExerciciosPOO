@@ -1,15 +1,12 @@
-package utils;
+package notasAlunos;
 
 import java.util.Scanner;
-
 public class Leitor {
     private Scanner scanner = new Scanner(System.in);
-
     public String lerString(String mensagem) {
         System.out.println(mensagem);
         return scanner.nextLine();
     }
-
     public int lerInteiro(String mensagem) {
         while (true) {
             try {
@@ -20,7 +17,6 @@ public class Leitor {
             }
         }
     }
-
     public double lerDecimal(String mensagem) {
         while (true) {
             try {
@@ -31,7 +27,6 @@ public class Leitor {
             }
         }
     }
-
     public double[] lerVariosDecimais(String mensagem, int quantidade) {
         double[] numeros = new double[quantidade];
 
@@ -39,7 +34,6 @@ public class Leitor {
             String novaMensagem = String.format("%s (%d de %d) ", mensagem, i+1, quantidade);
             numeros[i] = lerDecimal(novaMensagem);
         }
-
         return numeros;
     }
 }
